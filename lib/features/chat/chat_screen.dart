@@ -1,6 +1,8 @@
 // import 'package:flutter/material.dart';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:kiko_ai/shared/widgets/custom_buttons.dart';
 
 import '../../shared/widgets/custom_text.dart';
 
@@ -9,32 +11,16 @@ class ChatScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final formKey = GlobalKey<FormState>();
     return Scaffold(
-      appBar: AppBar(title: CustomText.text("Chat Scare")),
-      body: Container(
-        color: Colors.red,
-        child: Form(
-          key: formKey,
-          child: Column(
-            children: [
-              TextFormField(
-
-
-                validator: (value) => value!.isEmpty ? "required" : null,
-              ),
-              TextFormField(),
-              ElevatedButton(
-                onPressed: () {
-                  if (formKey.currentState!.validate()) {
-                    print("validated");
-                  }
-                },
-                child: Text("Send"),
-              ),
-            ],
+      appBar: AppBar(title: CustomText.text("Chat Screen")),
+      body: Column(
+        children: [
+          CustomButtons.circleIconButton(
+            onPressed: () => print("void call back "),
+            child: Icon(CupertinoIcons.xmark),
           ),
-        ),
+        
+        ],
       ),
     );
   }
