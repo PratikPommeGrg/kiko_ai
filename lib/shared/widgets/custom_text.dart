@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kiko_ai/core/constants/texts.dart';
+import 'package:kiko_ai/core/app/constants/app_colors.dart';
+import 'package:kiko_ai/core/app/constants/texts.dart';
 import 'package:kiko_ai/shared/states/states.dart';
 
 class CustomText {
@@ -32,7 +33,7 @@ class CustomText {
       fontFamily: kFontFamily,
       fontStyle: fontStyle ?? FontStyle.normal,
       fontWeight: fontWeight ?? FontWeight.normal,
-      color: color,
+      color: color ?? AppColors.onSurfaceLight,
     ),
   );
 }

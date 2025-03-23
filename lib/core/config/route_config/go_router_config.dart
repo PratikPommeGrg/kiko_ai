@@ -1,5 +1,5 @@
 import 'package:go_router/go_router.dart';
-import 'package:kiko_ai/core/config/routes/routes.dart';
+import 'package:kiko_ai/core/config/route_config/routes.dart';
 import 'package:kiko_ai/shared/states/states.dart';
 
 import '../../../features/chat/chat_screen.dart';

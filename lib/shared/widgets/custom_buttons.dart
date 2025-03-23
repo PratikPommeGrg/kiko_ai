@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kiko_ai/core/app/constants/app_border_radius.dart';
 
 class CustomButtons {
   // custom circlular icon button
@@ -17,15 +18,13 @@ class CustomButtons {
     onPressed: onPressed,
     icon: child,
     style: ButtonStyle(
-      backgroundColor: WidgetStatePropertyAll(
-        backgroundColor ?? Colors.green.shade200,
-      ),
+      backgroundColor: WidgetStatePropertyAll(backgroundColor ?? Colors.white),
       foregroundColor: WidgetStatePropertyAll(foregroundColor),
       side:
           enableBorder ?? false
               ? WidgetStatePropertyAll(
                 BorderSide(
-                  color: borderColor ?? Colors.green,
+                  color: borderColor ?? Colors.black,
                   width: borderWidth ?? 1,
                 ),
               )
@@ -34,11 +33,23 @@ class CustomButtons {
   );
 
   // custom elevated button
-  static ElevatedButton elevatedButton(
-    {
-       required VoidCallback onPressed,
+  static ElevatedButton elevatedButton({
+    required VoidCallback onPressed,
     required Widget child,
-    }
-  ) =>
-      ElevatedButton(onPressed: () {}, child: Text("data"));
+    Color? backgroundColor,
+    double? buttonHeight,
+    double? borderRadius,
+  }) => ElevatedButton(
+    onPressed: onPressed,
+    style: ButtonStyle(
+      elevation: WidgetStatePropertyAll(0),
+      backgroundColor: WidgetStatePropertyAll(Colors.green.shade200),
+      // foregroundColor: WidgetStatePropertyAll(Colors.green),
+      shape: WidgetStatePropertyAll(
+        RoundedRectangleBorder(borderRadius: AppBorderRadius.small),
+      ),
+      minimumSize: WidgetStatePropertyAll(Size.fromHeight(buttonHeight ?? 48)),
+    ),
+    child: child,
+  );
 }
