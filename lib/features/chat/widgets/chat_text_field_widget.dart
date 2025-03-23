@@ -1,4 +1,4 @@
-part of '../chat_screen.dart';
+part of '../view/chat_screen.dart';
 
 class ChatTextFieldWidget extends StatelessWidget {
   const ChatTextFieldWidget({super.key});

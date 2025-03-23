@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kiko_ai/core/config/route_config/go_router_config.dart';
+import 'package:kiko_ai/core/config/route_config/router_config.dart';
 import 'package:kiko_ai/core/app/constants/texts.dart';
 import 'package:kiko_ai/core/app/theme/light_theme.dart';
 import 'package:kiko_ai/shared/widgets/unfocus_ontap.dart';
@@ -13,7 +13,7 @@ class KikoAi extends StatelessWidget {
       child: MaterialApp.router(
         theme: lightTheme,
         title: kAppName,
-        routerConfig: goRouterConfig,
+        routerConfig: routerConfig,
       ),
     );
   }

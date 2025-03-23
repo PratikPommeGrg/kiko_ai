@@ -2,9 +2,9 @@ import 'package:go_router/go_router.dart';
 import 'package:kiko_ai/core/config/route_config/routes.dart';
 import 'package:kiko_ai/shared/states/states.dart';
 
-import '../../../features/chat/chat_screen.dart';
+import '../../../features/chat/view/chat_screen.dart';
 
-final goRouterConfig = GoRouter(
+final routerConfig = GoRouter(
   navigatorKey: globalNavigatorKey,
   initialLocation: RoutesPath.chatScreen,
   routes: [
