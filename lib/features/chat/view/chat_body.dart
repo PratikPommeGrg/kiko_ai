@@ -1,4 +1,4 @@
-part of'./chat_screen.dart';
+part of './chat_screen.dart';
 
 class ChatBody extends StatefulWidget {
   const ChatBody({super.key});
@@ -80,7 +80,7 @@ class _ChatBodyState extends State<ChatBody> with WidgetsBindingObserver {
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 0),
+        padding: AppPadding.horizontal,
         child: Column(
           children: [
             Expanded(
